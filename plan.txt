@@ -1,0 +1,13 @@
+find ways to organize actionscript definitions, 
+     http://etcs.ru/flash/shit/definition.xml
+     maybe just parse from the documentation
+     learn from the flashdevelop project
+     	   http://www.flashdevelop.org/community/viewtopic.php?f=9&t=3776&hilit=autocomplete+svn
+learn to reuse elisp autocomplete others has written
+  http://stackoverflow.com/questions/1144259/how-to-display-autocomplete-choices-in-emacs
+
+
+learn to browse library definition
+      http://www.emacswiki.org/emacs/BrowseAproposURL
+
+Maybe use Lucene for locating relevent documentation?
