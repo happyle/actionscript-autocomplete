@@ -11,3 +11,8 @@ learn to browse library definition
       http://www.emacswiki.org/emacs/BrowseAproposURL
 
 Maybe use Lucene for locating relevent documentation?
+
+
+
+will go with  ert.el for unit testing and found autocomplet, will model after phpcompletion
+and optimize later with predictive mode
