@@ -384,6 +384,8 @@ see `phpcmp-search-url'"
 ;;(loop for x from 1 to 10 collect x)
 ;;(loop for (a b) in '((1 2) (3 4)) collect (list b a))
 ;;
+;;(loop for x from 1 to 10 do (print x)(print (* 2 x)) finally return 1)
+ 
 (defun phpcmp-smart-sort (table)
   ;; silence compiler
   (declare (special detector))
@@ -412,12 +414,17 @@ see `phpcmp-search-url'"
           finally return table)))
 
 
-
-
+;;;builds a regular expression thingy, but don't get when it is useful??
 (defvar phpcmp-get-words-in-buffer-regexp
   (rx (>= 3 (or (syntax word)
                 (syntax symbol)))))
 
+;;search buffer for all words with length greater than 3 in buffer
+;;(phpcmp-get-words-in-buffer-regexp)
+;; (let ()
+;;   (re-search-forward phpcmp-get-words-in-buffer-regexp)
+;;   (print (match-string-no-properties 0)))
+  
 (defun phpcmp-get-words-in-buffer ()
   (let ((cur-point (point))
         (ret nil))
@@ -433,6 +440,10 @@ see `phpcmp-search-url'"
     ;; return
     (nreverse ret)))
 
+
+;;got to look at this phpcmp-db-get function
+;;here is the database, which is a bunch of list as shown below
+;;it is using etags to help is making this table
 (defun phpcmp-completions-table ()
   "list of list(name get-candidates-funcion)"
   (let* ((table '(("words in buffer" (lambda ()
@@ -456,6 +467,8 @@ see `phpcmp-search-url'"
          (table (append table phpcmp-etags-completions-table)))
     (run-hooks 'phpcmp--initialize-hook)
     (phpcmp-smart-sort table)))
+
+
 
 (defun phpcmp-re-sort-table (regexps table &optional reverse)
   (condition-case e

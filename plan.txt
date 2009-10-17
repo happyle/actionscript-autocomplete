@@ -14,5 +14,12 @@ Maybe use Lucene for locating relevent documentation?
 
 
 
-will go with  ert.el for unit testing and found autocomplet, will model after phpcompletion
-and optimize later with predictive mode
+will go with  ert.el for unit testing and found autocomplete, will model after phpcompletion
+and optimize later with predictive mode codes.
+
+
+dude, this thing is too much work, and I am on the millionaire road plan, hmm... will have to do this another time.
+For now the most effective is to use flashdevelop, in the meantime, I can study up on how flashdevelop is getting their autocompletion done to implement that in lisp.  
+
+
+
